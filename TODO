@@ -1,0 +1,15 @@
+==> emit event on status change
+==> can submit
+  local files
+  host files
+
+const MainframeJob = require('./MainframeJob.js');
+
+
+var USERNAME = process.env.ZOS_FTP_USERNAME || 'ADCDA';
+var PASSWD = process.env.ZOS_FTP_PASSWD || 'TEST';
+var HOST = process.env.ZOS_FTP_HOST;
+var PORT = process.env.ZOS_FTP_PORT;
+
+
+echo %ZOS_FTP_PORT%
