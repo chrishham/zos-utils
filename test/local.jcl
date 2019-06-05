@@ -1,5 +1,5 @@
 //U764C   JOB (SYSS,U764,U764),MSGCLASS=X,CLASS=S,NOTIFY=U764, 
-//      SYSTEM=SYA                                             
+//      SYSTEM=SYA                                            
 //STEP    EXEC DB2BPLI,                                        
 //        SIDX=U764,                                           
 //        LIDX=U764,                                           

@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",
-    "test": "standard && nyc mocha"
+    "test": "standard && nyc mocha --timeout 15000 --slow 15000"
   },
   "keywords": [],
   "author": "Christopher Chamaletsos",
@@ -27,7 +27,8 @@
   "standard": {
     "globals": [
       "describe",
-      "it"
+      "it",
+      "before"
     ]
   }
 }

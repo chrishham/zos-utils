@@ -1,0 +1,702 @@
+
+2019/06/05 12:23:57 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:23:57 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:23:57 : Transfer type changing to Ascii .... completed
+2019/06/05 12:23:57 : Transfer mode changing to Jes .... completed
+2019/06/05 12:23:57 : FREEZE:  submitted successfully!
+2019/06/05 12:24:00 : JOB15252: status = OUTPUT
+2019/06/05 12:24:00 : JOB15252: ended with Return Code = 0004
+2019/06/05 12:24:03 : JOB15252: outlist downloaded successfully.
+2019/06/05 12:24:03 : JOB15252: ftp exiting .... ok!
+2019/06/05 12:24:03 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:24:03 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:24:03 : Transfer type changing to Ascii .... completed
+2019/06/05 12:24:03 : Cwd one directory up ... completed
+2019/06/05 12:24:03 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:24:03 : Transfer mode changing to Jes .... completed
+2019/06/05 12:24:03 : LINKDB2:  submitted successfully!
+2019/06/05 12:24:06 : JOB15258: status = OUTPUT
+2019/06/05 12:24:06 : JOB15258: ended with Return Code = 0004
+2019/06/05 12:24:08 : JOB15258: outlist deleted on Z/OS
+2019/06/05 12:24:08 : JOB15258: ftp exiting .... ok!
+2019/06/05 12:24:08 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:24:08 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:24:08 : Transfer type changing to Ascii .... completed
+2019/06/05 12:24:08 : Cwd one directory up ... completed
+2019/06/05 12:24:08 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:24:08 : Transfer mode changing to Jes .... completed
+2019/06/05 12:24:08 : LINKDB2:  submitted successfully!
+2019/06/05 12:24:11 : JOB15259: status = OUTPUT
+2019/06/05 12:24:11 : JOB15259: ended with Return Code = 0004
+2019/06/05 12:24:12 : JOB15259: outlist deleted on Z/OS
+2019/06/05 12:24:12 : LINKDB2: Trying to cancel Job ...
+2019/06/05 12:24:12 : LINKDB2: Cancel failed!
+2019/06/05 12:24:12 : JOB15259: ftp exiting .... ok!
+2019/06/05 12:24:12 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:24:12 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:24:12 : Transfer type changing to Ascii .... completed
+2019/06/05 12:24:12 : Cwd one directory up ... completed
+2019/06/05 12:24:12 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:24:12 : Transfer mode changing to Jes .... completed
+2019/06/05 12:24:12 : LOAUNL:  submitted successfully!
+2019/06/05 12:24:15 : LOAUNL: Trying to cancel Job ...
+2019/06/05 12:24:15 : JOB15262: status = OUTPUT
+2019/06/05 12:24:15 : JOB15262: ended with Return Code = 0004
+2019/06/05 12:24:16 : JOB15262: Cancel successful!
+2019/06/05 12:24:16 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:24:16 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:24:16 : Transfer type changing to Ascii .... completed
+2019/06/05 12:24:16 : Cwd one directory up ... completed
+2019/06/05 12:24:48 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:24:48 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:24:48 : Transfer type changing to Ascii .... completed
+2019/06/05 12:24:48 : Transfer mode changing to Jes .... completed
+2019/06/05 12:24:48 : FREEZE:  submitted successfully!
+2019/06/05 12:24:51 : JOB15276: status = OUTPUT
+2019/06/05 12:24:51 : JOB15276: ended with Return Code = 0004
+2019/06/05 12:24:52 : JOB15276: outlist downloaded successfully.
+2019/06/05 12:24:52 : JOB15276: ftp exiting .... ok!
+2019/06/05 12:24:52 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:24:52 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:24:52 : Transfer type changing to Ascii .... completed
+2019/06/05 12:24:52 : Cwd one directory up ... completed
+2019/06/05 12:24:52 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:24:52 : Transfer mode changing to Jes .... completed
+2019/06/05 12:24:52 : LINKDB2:  submitted successfully!
+2019/06/05 12:24:55 : JOB15277: status = OUTPUT
+2019/06/05 12:24:55 : JOB15277: ended with Return Code = 0004
+2019/06/05 12:24:57 : JOB15277: outlist deleted on Z/OS
+2019/06/05 12:24:57 : JOB15277: ftp exiting .... ok!
+2019/06/05 12:24:57 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:24:57 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:24:57 : Transfer type changing to Ascii .... completed
+2019/06/05 12:24:57 : Cwd one directory up ... completed
+2019/06/05 12:24:57 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:24:57 : Transfer mode changing to Jes .... completed
+2019/06/05 12:24:57 : LINKDB2:  submitted successfully!
+2019/06/05 12:25:00 : JOB15278: status = OUTPUT
+2019/06/05 12:25:00 : JOB15278: ended with Return Code = 0004
+2019/06/05 12:25:02 : JOB15278: outlist deleted on Z/OS
+2019/06/05 12:25:02 : LINKDB2: Trying to cancel Job ...
+2019/06/05 12:25:02 : LINKDB2: Cancel failed!
+2019/06/05 12:25:02 : JOB15278: ftp exiting .... ok!
+2019/06/05 12:25:02 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:25:02 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:25:02 : Transfer type changing to Ascii .... completed
+2019/06/05 12:25:02 : Cwd one directory up ... completed
+2019/06/05 12:25:02 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:25:02 : Transfer mode changing to Jes .... completed
+2019/06/05 12:25:02 : LOAUNL:  submitted successfully!
+2019/06/05 12:25:05 : LOAUNL: Trying to cancel Job ...
+2019/06/05 12:25:05 : JOB15282: status = OUTPUT
+2019/06/05 12:25:05 : JOB15282: ended with Return Code = 0004
+2019/06/05 12:25:06 : JOB15282: Cancel successful!
+2019/06/05 12:25:06 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:25:06 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:25:06 : Transfer type changing to Ascii .... completed
+2019/06/05 12:25:06 : Cwd one directory up ... completed
+2019/06/05 12:26:30 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:26:30 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:26:30 : Transfer type changing to Ascii .... completed
+2019/06/05 12:26:30 : Transfer mode changing to Jes .... completed
+2019/06/05 12:26:30 : FREEZE:  submitted successfully!
+2019/06/05 12:26:33 : JOB15317: status = OUTPUT
+2019/06/05 12:26:33 : JOB15317: ended with Return Code = 0004
+2019/06/05 12:26:35 : JOB15317: outlist downloaded successfully.
+2019/06/05 12:26:35 : JOB15317: ftp exiting .... ok!
+2019/06/05 12:26:35 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:26:35 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:26:35 : Transfer type changing to Ascii .... completed
+2019/06/05 12:26:35 : Cwd one directory up ... completed
+2019/06/05 12:26:35 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:26:35 : Transfer mode changing to Jes .... completed
+2019/06/05 12:26:35 : LINKDB2:  submitted successfully!
+2019/06/05 12:26:38 : JOB15325: status = OUTPUT
+2019/06/05 12:26:38 : JOB15325: ended with Return Code = 0004
+2019/06/05 12:26:41 : JOB15325: outlist deleted on Z/OS
+2019/06/05 12:26:41 : JOB15325: ftp exiting .... ok!
+2019/06/05 12:26:41 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:26:41 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:26:41 : Transfer type changing to Ascii .... completed
+2019/06/05 12:26:41 : Cwd one directory up ... completed
+2019/06/05 12:26:41 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:26:41 : Transfer mode changing to Jes .... completed
+2019/06/05 12:26:41 : LINKDB2:  submitted successfully!
+2019/06/05 12:26:44 : JOB15328: status = OUTPUT
+2019/06/05 12:26:44 : JOB15328: ended with Return Code = 0004
+2019/06/05 12:26:46 : JOB15328: outlist deleted on Z/OS
+2019/06/05 12:26:46 : LINKDB2: Trying to cancel Job ...
+2019/06/05 12:26:46 : LINKDB2: Cancel failed!
+2019/06/05 12:26:47 : JOB15328: ftp exiting .... ok!
+2019/06/05 12:26:47 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:26:46 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:26:47 : Transfer type changing to Ascii .... completed
+2019/06/05 12:26:47 : Cwd one directory up ... completed
+2019/06/05 12:26:47 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:26:47 : Transfer mode changing to Jes .... completed
+2019/06/05 12:26:47 : LOAUNL:  submitted successfully!
+2019/06/05 12:26:50 : LOAUNL: Trying to cancel Job ...
+2019/06/05 12:26:50 : JOB15331: status = OUTPUT
+2019/06/05 12:26:50 : JOB15331: ended with Return Code = 0004
+2019/06/05 12:26:50 : JOB15331: Cancel successful!
+2019/06/05 12:26:50 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:26:50 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:26:50 : Transfer type changing to Ascii .... completed
+2019/06/05 12:26:50 : Cwd one directory up ... completed
+2019/06/05 12:34:22 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:34:22 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:34:22 : Transfer type changing to Ascii .... completed
+2019/06/05 12:34:22 : Transfer mode changing to Jes .... completed
+2019/06/05 12:34:22 : FREEZE:  submitted successfully!
+2019/06/05 12:34:25 : JOB15507: status = OUTPUT
+2019/06/05 12:34:25 : JOB15507: ended with Return Code = 0004
+2019/06/05 12:34:28 : JOB15507: outlist downloaded successfully.
+2019/06/05 12:34:28 : JOB15507: ftp exiting .... ok!
+2019/06/05 12:34:28 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:34:28 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:34:28 : Transfer type changing to Ascii .... completed
+2019/06/05 12:34:28 : Cwd one directory up ... completed
+2019/06/05 12:34:28 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:34:28 : Transfer mode changing to Jes .... completed
+2019/06/05 12:34:28 : LINKDB2:  submitted successfully!
+2019/06/05 12:34:31 : JOB15509: status = OUTPUT
+2019/06/05 12:34:31 : JOB15509: ended with Return Code = 0004
+2019/06/05 12:34:32 : JOB15509: outlist deleted on Z/OS
+2019/06/05 12:34:32 : JOB15509: ftp exiting .... ok!
+2019/06/05 12:34:32 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:34:32 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:34:32 : Transfer type changing to Ascii .... completed
+2019/06/05 12:34:32 : Cwd one directory up ... completed
+2019/06/05 12:34:32 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:34:32 : Transfer mode changing to Jes .... completed
+2019/06/05 12:34:32 : LINKDB2:  submitted successfully!
+2019/06/05 12:34:35 : JOB15512: status = OUTPUT
+2019/06/05 12:34:35 : JOB15512: ended with Return Code = 0004
+2019/06/05 12:34:37 : JOB15512: outlist deleted on Z/OS
+2019/06/05 12:34:37 : LINKDB2: Trying to cancel Job ...
+2019/06/05 12:34:37 : LINKDB2: Cancel failed!
+2019/06/05 12:34:37 : JOB15512: ftp exiting .... ok!
+2019/06/05 12:34:37 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:34:37 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:34:37 : Transfer type changing to Ascii .... completed
+2019/06/05 12:34:37 : Cwd one directory up ... completed
+2019/06/05 12:34:37 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:34:37 : Transfer mode changing to Jes .... completed
+2019/06/05 12:34:37 : LOAUNL:  submitted successfully!
+2019/06/05 12:34:40 : LOAUNL: Trying to cancel Job ...
+2019/06/05 12:34:40 : JOB15513: status = OUTPUT
+2019/06/05 12:34:40 : JOB15513: ended with Return Code = 0004
+2019/06/05 12:34:40 : JOB15513: Cancel successful!
+2019/06/05 12:34:40 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:34:40 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:34:40 : Transfer type changing to Ascii .... completed
+2019/06/05 12:34:40 : Cwd one directory up ... completed
+2019/06/05 12:37:11 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:37:11 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:37:11 : Transfer type changing to Ascii .... completed
+2019/06/05 12:37:11 : Transfer mode changing to Jes .... completed
+2019/06/05 12:37:11 : FREEZE:  submitted successfully!
+2019/06/05 12:37:14 : JOB15583: status = OUTPUT
+2019/06/05 12:37:14 : JOB15583: ended with Return Code = 0004
+2019/06/05 12:37:15 : JOB15583: outlist downloaded successfully.
+2019/06/05 12:37:15 : JOB15583: ftp exiting .... ok!
+2019/06/05 12:37:15 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:37:15 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:37:15 : Transfer type changing to Ascii .... completed
+2019/06/05 12:37:15 : Cwd one directory up ... completed
+2019/06/05 12:37:15 : Download U764.SOURCE.PDS(LOAUNL) ... completed
+2019/06/05 12:37:15 : Transfer mode changing to Jes .... completed
+2019/06/05 12:37:15 : LINKDB2:  submitted successfully!
+2019/06/05 12:37:18 : JOB15584: status = INPUT 
+2019/06/05 12:37:21 : JOB15584: status = INPUT 
+2019/06/05 12:37:24 : JOB15584: status = INPUT 
+2019/06/05 12:37:25 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:37:25 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:37:25 : Transfer type changing to Ascii .... completed
+2019/06/05 12:37:25 : Cwd one directory up ... completed
+2019/06/05 12:37:25 : Download U764.SOURCE.PDS(LOAUNL) ... completed
+2019/06/05 12:37:25 : Transfer mode changing to Jes .... completed
+2019/06/05 12:37:26 : LINKDB2:  submitted successfully!
+2019/06/05 12:37:28 : JOB15584: status = INPUT 
+2019/06/05 12:37:29 : JOB15586: status = INPUT 
+2019/06/05 12:37:31 : JOB15584: status = INPUT 
+2019/06/05 12:37:32 : JOB15586: status = INPUT 
+2019/06/05 12:37:34 : JOB15584: status = INPUT 
+2019/06/05 12:37:35 : JOB15586: status = INPUT 
+2019/06/05 12:37:35 : LINKDB2: Trying to cancel Job ...
+2019/06/05 12:37:35 : LINKDB2: Cancel failed!
+2019/06/05 12:37:36 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:37:36 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:37:36 : Transfer type changing to Ascii .... completed
+2019/06/05 12:37:36 : Cwd one directory up ... completed
+2019/06/05 12:37:36 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:37:36 : Transfer mode changing to Jes .... completed
+2019/06/05 12:37:36 : LOAUNL:  submitted successfully!
+2019/06/05 12:37:38 : JOB15586: status = INPUT 
+2019/06/05 12:37:39 : JOB15584: status = ACTIVE
+2019/06/05 12:37:39 : LOAUNL: Trying to cancel Job ...
+2019/06/05 12:37:39 : JOB15592: status = ACTIVE
+2019/06/05 12:37:39 : JOB15592: Cancel successful!
+2019/06/05 12:37:39 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:37:39 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:37:39 : Transfer type changing to Ascii .... completed
+2019/06/05 12:37:39 : Cwd one directory up ... completed
+2019/06/05 12:37:41 : JOB15586: status = INPUT 
+2019/06/05 12:37:43 : JOB15584: status = ACTIVE
+2019/06/05 12:37:44 : JOB15586: status = INPUT 
+2019/06/05 12:37:47 : JOB15586: status = INPUT 
+2019/06/05 12:37:48 : JOB15584: status = ACTIVE
+2019/06/05 12:37:50 : JOB15586: status = INPUT 
+2019/06/05 12:37:52 : JOB15584: status = ACTIVE
+2019/06/05 12:37:53 : JOB15586: status = INPUT 
+2019/06/05 12:37:56 : JOB15586: status = INPUT 
+2019/06/05 12:37:57 : JOB15584: status = ACTIVE
+2019/06/05 12:37:59 : JOB15586: status = INPUT 
+2019/06/05 12:38:02 : JOB15586: status = INPUT 
+2019/06/05 12:38:02 : JOB15584: status = ACTIVE
+2019/06/05 12:38:05 : JOB15586: status = INPUT 
+2019/06/05 12:38:06 : JOB15584: status = ACTIVE
+2019/06/05 12:38:08 : JOB15586: status = INPUT 
+2019/06/05 12:38:11 : JOB15584: status = ACTIVE
+2019/06/05 12:38:11 : JOB15586: status = INPUT 
+2019/06/05 12:38:14 : JOB15586: status = INPUT 
+2019/06/05 12:38:15 : JOB15584: status = ACTIVE
+2019/06/05 12:38:17 : JOB15586: status = INPUT 
+2019/06/05 12:38:20 : JOB15586: status = INPUT 
+2019/06/05 12:38:21 : JOB15584: status = ACTIVE
+2019/06/05 12:39:12 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:39:12 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:39:13 : Transfer type changing to Ascii .... completed
+2019/06/05 12:39:13 : Transfer mode changing to Jes .... completed
+2019/06/05 12:39:13 : FREEZE:  submitted successfully!
+2019/06/05 12:39:16 : JOB15626: status = OUTPUT
+2019/06/05 12:39:16 : JOB15626: ended with Return Code = 0004
+2019/06/05 12:39:18 : JOB15626: outlist downloaded successfully.
+2019/06/05 12:39:18 : JOB15626: ftp exiting .... ok!
+2019/06/05 12:39:18 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:39:18 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:39:18 : Transfer type changing to Ascii .... completed
+2019/06/05 12:39:18 : Cwd one directory up ... completed
+2019/06/05 12:39:18 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:39:18 : Transfer mode changing to Jes .... completed
+2019/06/05 12:39:18 : LINKDB2:  submitted successfully!
+2019/06/05 12:39:21 : JOB15628: status = OUTPUT
+2019/06/05 12:39:21 : JOB15628: ended with Return Code = 0004
+2019/06/05 12:39:24 : JOB15628: outlist deleted on Z/OS
+2019/06/05 12:39:24 : JOB15628: ftp exiting .... ok!
+2019/06/05 12:39:24 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:39:24 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:39:24 : Transfer type changing to Ascii .... completed
+2019/06/05 12:39:24 : Cwd one directory up ... completed
+2019/06/05 12:39:24 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:39:24 : Transfer mode changing to Jes .... completed
+2019/06/05 12:39:24 : LINKDB2:  submitted successfully!
+2019/06/05 12:39:27 : JOB15636: status = OUTPUT
+2019/06/05 12:39:27 : JOB15636: ended with Return Code = 0004
+2019/06/05 12:39:31 : JOB15636: outlist deleted on Z/OS
+2019/06/05 12:39:31 : LINKDB2: Trying to cancel Job ...
+2019/06/05 12:39:31 : LINKDB2: Cancel failed!
+2019/06/05 12:39:31 : JOB15636: ftp exiting .... ok!
+2019/06/05 12:39:31 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:39:31 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:39:31 : Transfer type changing to Ascii .... completed
+2019/06/05 12:39:31 : Cwd one directory up ... completed
+2019/06/05 12:39:31 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 12:39:31 : Transfer mode changing to Jes .... completed
+2019/06/05 12:39:31 : LOAUNL:  submitted successfully!
+2019/06/05 12:39:34 : LOAUNL: Trying to cancel Job ...
+2019/06/05 12:39:34 : JOB15639: status = OUTPUT
+2019/06/05 12:39:34 : JOB15639: ended with Return Code = 0004
+2019/06/05 12:39:35 : JOB15639: Cancel successful!
+2019/06/05 12:39:35 : TCPFTP1 IBM FTP CS V2R3 at proda, 12:39:35 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 12:39:35 : Transfer type changing to Ascii .... completed
+2019/06/05 12:39:35 : Cwd one directory up ... completed
+2019/06/05 13:13:43 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:13:43 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:13:43 : Transfer type changing to Ascii .... completed
+2019/06/05 13:13:43 : Transfer mode changing to Jes .... completed
+2019/06/05 13:13:43 : FREEZE:  submitted successfully!
+2019/06/05 13:13:46 : JOB16445: status = OUTPUT
+2019/06/05 13:13:46 : JOB16445: ended with Return Code = 0004
+2019/06/05 13:13:48 : JOB16445: outlist downloaded successfully.
+2019/06/05 13:13:48 : JOB16445: ftp exiting .... ok!
+2019/06/05 13:13:49 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:13:48 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:13:49 : Transfer type changing to Ascii .... completed
+2019/06/05 13:13:49 : Cwd one directory up ... completed
+2019/06/05 13:13:49 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:13:49 : Transfer mode changing to Jes .... completed
+2019/06/05 13:13:49 : LINKDB2:  submitted successfully!
+2019/06/05 13:13:52 : JOB16448: status = ACTIVE
+2019/06/05 13:13:55 : JOB16448: status = OUTPUT
+2019/06/05 13:13:55 : JOB16448: ended with Return Code = 0000
+2019/06/05 13:13:56 : JOB16448: outlist deleted on Z/OS
+2019/06/05 13:13:56 : JOB16448: ftp exiting .... ok!
+2019/06/05 13:13:56 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:13:56 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:13:56 : Transfer type changing to Ascii .... completed
+2019/06/05 13:13:56 : Cwd one directory up ... completed
+2019/06/05 13:13:56 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:13:56 : Transfer mode changing to Jes .... completed
+2019/06/05 13:13:56 : LINKDB2:  submitted successfully!
+2019/06/05 13:13:59 : JOB16450: status = OUTPUT
+2019/06/05 13:13:59 : JOB16450 : JCL error
+2019/06/05 13:14:01 : JOB16450: outlist deleted on Z/OS
+2019/06/05 13:14:01 : LINKDB2: Trying to cancel Job ...
+2019/06/05 13:14:01 : LINKDB2: Cancel failed!
+2019/06/05 13:14:01 : JOB16450: ftp exiting .... ok!
+2019/06/05 13:14:02 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:14:01 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:14:02 : Transfer type changing to Ascii .... completed
+2019/06/05 13:14:02 : Cwd one directory up ... completed
+2019/06/05 13:14:02 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:14:02 : Transfer mode changing to Jes .... completed
+2019/06/05 13:14:02 : LOAUNL:  submitted successfully!
+2019/06/05 13:14:05 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:14:05 : JOB16460: status = OUTPUT
+2019/06/05 13:14:05 : JOB16460: ended with Return Code = 0004
+2019/06/05 13:14:06 : JOB16460: Cancel successful!
+2019/06/05 13:14:06 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:14:06 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:14:06 : Transfer type changing to Ascii .... completed
+2019/06/05 13:14:06 : Cwd one directory up ... completed
+2019/06/05 13:24:35 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:24:35 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:24:35 : Transfer type changing to Ascii .... completed
+2019/06/05 13:24:35 : Transfer mode changing to Jes .... completed
+2019/06/05 13:24:35 : FREEZE:  submitted successfully!
+2019/06/05 13:24:38 : JOB16684: status = OUTPUT
+2019/06/05 13:24:38 : JOB16684: ended with Return Code = 0004
+2019/06/05 13:24:41 : JOB16684: outlist downloaded successfully.
+2019/06/05 13:24:41 : JOB16684: ftp exiting .... ok!
+2019/06/05 13:24:41 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:24:41 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:24:41 : Transfer type changing to Ascii .... completed
+2019/06/05 13:24:41 : Cwd one directory up ... completed
+2019/06/05 13:24:41 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:24:41 : Transfer mode changing to Jes .... completed
+2019/06/05 13:24:41 : TESTSUB:  submitted successfully!
+2019/06/05 13:24:44 : JOB16686: status = OUTPUT
+2019/06/05 13:24:44 : JOB16686: ended with Return Code = 0004
+2019/06/05 13:24:46 : JOB16686: outlist deleted on Z/OS
+2019/06/05 13:24:46 : JOB16686: ftp exiting .... ok!
+2019/06/05 13:24:46 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:24:46 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:24:46 : Transfer type changing to Ascii .... completed
+2019/06/05 13:24:46 : Cwd one directory up ... completed
+2019/06/05 13:24:46 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:24:46 : Transfer mode changing to Jes .... completed
+2019/06/05 13:24:46 : TESTSUB:  submitted successfully!
+2019/06/05 13:24:49 : JOB16696: status = OUTPUT
+2019/06/05 13:24:49 : JOB16696: ended with Return Code = 0004
+2019/06/05 13:24:50 : JOB16696: outlist deleted on Z/OS
+2019/06/05 13:24:50 : TESTSUB: Trying to cancel Job ...
+2019/06/05 13:24:50 : TESTSUB: Cancel failed!
+2019/06/05 13:24:50 : JOB16696: ftp exiting .... ok!
+2019/06/05 13:24:50 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:24:50 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:24:50 : Transfer type changing to Ascii .... completed
+2019/06/05 13:24:50 : Cwd one directory up ... completed
+2019/06/05 13:24:51 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:24:51 : Transfer mode changing to Jes .... completed
+2019/06/05 13:24:51 : LOAUNL:  submitted successfully!
+2019/06/05 13:24:54 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:24:54 : JOB16697: status = OUTPUT
+2019/06/05 13:24:54 : JOB16697: ended with Return Code = 0004
+2019/06/05 13:24:54 : JOB16697: Cancel successful!
+2019/06/05 13:24:54 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:24:54 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:24:54 : Transfer type changing to Ascii .... completed
+2019/06/05 13:24:54 : Cwd one directory up ... completed
+2019/06/05 13:30:35 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:30:35 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:30:35 : Transfer type changing to Ascii .... completed
+2019/06/05 13:30:35 : Transfer mode changing to Jes .... completed
+2019/06/05 13:30:35 : FREEZE:  submitted successfully!
+2019/06/05 13:30:38 : JOB16822: status = OUTPUT
+2019/06/05 13:30:38 : JOB16822: ended with Return Code = 0004
+2019/06/05 13:30:41 : JOB16822: outlist downloaded successfully.
+2019/06/05 13:30:41 : JOB16822: ftp exiting .... ok!
+2019/06/05 13:30:41 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:30:41 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:30:41 : Transfer type changing to Ascii .... completed
+2019/06/05 13:30:41 : Cwd one directory up ... completed
+2019/06/05 13:30:41 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:30:41 : Transfer mode changing to Jes .... completed
+2019/06/05 13:30:41 : TESTSUB:  submitted successfully!
+2019/06/05 13:30:44 : JOB16823: status = ACTIVE
+2019/06/05 13:30:47 : JOB16823: status = OUTPUT
+2019/06/05 13:30:47 : JOB16823: ended with Return Code = 0004
+2019/06/05 13:30:48 : JOB16823: outlist deleted on Z/OS
+2019/06/05 13:30:48 : JOB16823: ftp exiting .... ok!
+2019/06/05 13:30:48 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:30:48 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:30:48 : Transfer type changing to Ascii .... completed
+2019/06/05 13:30:48 : Cwd one directory up ... completed
+2019/06/05 13:30:48 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:30:48 : Transfer mode changing to Jes .... completed
+2019/06/05 13:30:48 : TESTSUB:  submitted successfully!
+2019/06/05 13:30:51 : JOB16824: status = OUTPUT
+2019/06/05 13:30:51 : JOB16824: ended with Return Code = 0004
+2019/06/05 13:30:53 : JOB16824: outlist deleted on Z/OS
+2019/06/05 13:30:53 : TESTSUB: Trying to cancel Job ...
+2019/06/05 13:30:53 : TESTSUB: Cancel failed!
+2019/06/05 13:30:53 : JOB16824: ftp exiting .... ok!
+2019/06/05 13:30:53 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:30:53 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:30:53 : Transfer type changing to Ascii .... completed
+2019/06/05 13:30:53 : Cwd one directory up ... completed
+2019/06/05 13:30:53 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:30:53 : Transfer mode changing to Jes .... completed
+2019/06/05 13:30:53 : LOAUNL:  submitted successfully!
+2019/06/05 13:30:56 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:30:56 : JOB16825: status = OUTPUT
+2019/06/05 13:30:56 : JOB16825: ended with Return Code = 0004
+2019/06/05 13:30:57 : JOB16825: Cancel successful!
+2019/06/05 13:30:57 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:30:57 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:30:57 : Transfer type changing to Ascii .... completed
+2019/06/05 13:30:57 : Cwd one directory up ... completed
+2019/06/05 13:31:49 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:31:49 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:31:49 : Transfer type changing to Ascii .... completed
+2019/06/05 13:31:49 : Transfer mode changing to Jes .... completed
+2019/06/05 13:31:49 : FREEZE:  submitted successfully!
+2019/06/05 13:31:52 : JOB16860: status = OUTPUT
+2019/06/05 13:31:52 : JOB16860: ended with Return Code = 0004
+2019/06/05 13:31:55 : JOB16860: outlist downloaded successfully.
+2019/06/05 13:31:55 : JOB16860: ftp exiting .... ok!
+2019/06/05 13:31:55 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:31:55 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:31:55 : Transfer type changing to Ascii .... completed
+2019/06/05 13:31:55 : Cwd one directory up ... completed
+2019/06/05 13:31:55 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:31:55 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:31:55 : Transfer type changing to Ascii .... completed
+2019/06/05 13:31:55 : Cwd one directory up ... completed
+2019/06/05 13:31:55 : TESTSUB: Trying to cancel Job ...
+2019/06/05 13:31:55 : TESTSUB: Cancel failed!
+2019/06/05 13:31:55 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:31:55 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:31:55 : Transfer type changing to Ascii .... completed
+2019/06/05 13:31:55 : Cwd one directory up ... completed
+2019/06/05 13:31:55 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:31:55 : Transfer mode changing to Jes .... completed
+2019/06/05 13:31:55 : LOAUNL:  submitted successfully!
+2019/06/05 13:31:58 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:31:58 : JOB16863: status = OUTPUT
+2019/06/05 13:31:58 : JOB16863: ended with Return Code = 0004
+2019/06/05 13:31:59 : JOB16863: Cancel successful!
+2019/06/05 13:31:59 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:31:59 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:31:59 : Transfer type changing to Ascii .... completed
+2019/06/05 13:31:59 : Cwd one directory up ... completed
+2019/06/05 13:32:28 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:32:28 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:32:28 : Transfer type changing to Ascii .... completed
+2019/06/05 13:32:28 : Transfer mode changing to Jes .... completed
+2019/06/05 13:32:28 : FREEZE:  submitted successfully!
+2019/06/05 13:32:31 : JOB16877: status = INPUT 
+2019/06/05 13:32:34 : JOB16877: status = INPUT 
+2019/06/05 13:32:37 : JOB16877: status = INPUT 
+2019/06/05 13:32:38 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:32:38 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:32:38 : Transfer type changing to Ascii .... completed
+2019/06/05 13:32:38 : Cwd one directory up ... completed
+2019/06/05 13:32:38 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:32:38 : Transfer mode changing to Jes .... completed
+2019/06/05 13:32:38 : TESTSUB:  submitted successfully!
+2019/06/05 13:32:40 : JOB16877: status = INPUT 
+2019/06/05 13:32:41 : JOB16878: status = INPUT 
+2019/06/05 13:32:43 : JOB16877: status = INPUT 
+2019/06/05 13:32:44 : JOB16878: status = INPUT 
+2019/06/05 13:32:46 : JOB16877: status = INPUT 
+2019/06/05 13:32:47 : JOB16878: status = INPUT 
+2019/06/05 13:32:48 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:32:48 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:32:48 : Transfer type changing to Ascii .... completed
+2019/06/05 13:32:48 : Cwd one directory up ... completed
+2019/06/05 13:32:48 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:32:48 : Transfer mode changing to Jes .... completed
+2019/06/05 13:32:48 : TESTSUB:  submitted successfully!
+2019/06/05 13:32:49 : JOB16877: status = INPUT 
+2019/06/05 13:32:50 : JOB16878: status = ACTIVE
+2019/06/05 13:32:51 : JOB16879: status = INPUT 
+2019/06/05 13:32:52 : JOB16877: status = OUTPUT
+2019/06/05 13:32:52 : JOB16877: ended with Return Code = 0004
+2019/06/05 13:32:53 : JOB16878: status = ACTIVE
+2019/06/05 13:32:54 : JOB16877: outlist downloaded successfully.
+2019/06/05 13:32:54 : JOB16877: ftp exiting .... ok!
+2019/06/05 13:32:54 : JOB16879: status = ACTIVE
+2019/06/05 13:32:56 : JOB16878: status = OUTPUT
+2019/06/05 13:32:56 : JOB16878: ended with Return Code = 0004
+2019/06/05 13:32:57 : JOB16879: status = OUTPUT
+2019/06/05 13:32:57 : JOB16879: ended with Return Code = 0004
+2019/06/05 13:32:57 : JOB16878: outlist deleted on Z/OS
+2019/06/05 13:32:57 : JOB16878: ftp exiting .... ok!
+2019/06/05 13:32:58 : TESTSUB: Trying to cancel Job ...
+2019/06/05 13:32:58 : TESTSUB: Cancel failed!
+2019/06/05 13:32:58 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:32:58 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:32:58 : Transfer type changing to Ascii .... completed
+2019/06/05 13:32:58 : Cwd one directory up ... completed
+2019/06/05 13:32:58 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:32:58 : Transfer mode changing to Jes .... completed
+2019/06/05 13:32:59 : JOB16879: outlist deleted on Z/OS
+2019/06/05 13:32:59 : LOAUNL:  submitted successfully!
+2019/06/05 13:32:59 : JOB16879: ftp exiting .... ok!
+2019/06/05 13:33:02 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:33:02 : JOB16886: status = OUTPUT
+2019/06/05 13:33:02 : JOB16886: ended with Return Code = 0004
+2019/06/05 13:33:03 : JOB16886: Cancel successful!
+2019/06/05 13:33:03 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:33:03 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:33:03 : Transfer type changing to Ascii .... completed
+2019/06/05 13:33:03 : Cwd one directory up ... completed
+2019/06/05 13:33:58 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:33:58 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:33:58 : Transfer type changing to Ascii .... completed
+2019/06/05 13:33:58 : Transfer mode changing to Jes .... completed
+2019/06/05 13:33:58 : FREEZE:  submitted successfully!
+2019/06/05 13:34:01 : JOB16903: status = OUTPUT
+2019/06/05 13:34:01 : JOB16903: ended with Return Code = 0004
+2019/06/05 13:34:02 : JOB16903: outlist downloaded successfully.
+2019/06/05 13:34:02 : JOB16903: ftp exiting .... ok!
+2019/06/05 13:34:02 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:34:02 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:34:02 : Transfer type changing to Ascii .... completed
+2019/06/05 13:34:02 : Cwd one directory up ... completed
+2019/06/05 13:34:02 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:34:02 : Transfer mode changing to Jes .... completed
+2019/06/05 13:34:02 : TESTSUB:  submitted successfully!
+2019/06/05 13:34:05 : JOB16915: status = ACTIVE
+2019/06/05 13:34:08 : JOB16915: status = OUTPUT
+2019/06/05 13:34:08 : JOB16915: ended with Return Code = 0004
+2019/06/05 13:34:09 : JOB16915: outlist deleted on Z/OS
+2019/06/05 13:34:09 : JOB16915: ftp exiting .... ok!
+2019/06/05 13:34:09 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:34:09 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:34:09 : Transfer type changing to Ascii .... completed
+2019/06/05 13:34:09 : Cwd one directory up ... completed
+2019/06/05 13:34:09 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:34:09 : Transfer mode changing to Jes .... completed
+2019/06/05 13:34:09 : TESTSUB:  submitted successfully!
+2019/06/05 13:34:12 : JOB16928: status = ACTIVE
+2019/06/05 13:34:16 : JOB16928: status = OUTPUT
+2019/06/05 13:34:16 : JOB16928: ended with Return Code = 0004
+2019/06/05 13:34:17 : JOB16928: outlist deleted on Z/OS
+2019/06/05 13:34:17 : TESTSUB: Trying to cancel Job ...
+2019/06/05 13:34:17 : TESTSUB: Cancel failed!
+2019/06/05 13:34:17 : JOB16928: ftp exiting .... ok!
+2019/06/05 13:34:17 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:34:17 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:34:17 : Transfer type changing to Ascii .... completed
+2019/06/05 13:34:17 : Cwd one directory up ... completed
+2019/06/05 13:34:17 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:34:17 : Transfer mode changing to Jes .... completed
+2019/06/05 13:34:17 : LOAUNL:  submitted successfully!
+2019/06/05 13:34:20 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:34:20 : JOB16934: status = OUTPUT
+2019/06/05 13:34:20 : JOB16934: ended with Return Code = 0004
+2019/06/05 13:34:20 : JOB16934: Cancel successful!
+2019/06/05 13:34:21 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:34:20 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:34:21 : Transfer type changing to Ascii .... completed
+2019/06/05 13:34:21 : Cwd one directory up ... completed
+2019/06/05 13:35:58 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:35:58 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:35:58 : Transfer type changing to Ascii .... completed
+2019/06/05 13:35:58 : Transfer mode changing to Jes .... completed
+2019/06/05 13:35:58 : FREEZE:  submitted successfully!
+2019/06/05 13:36:01 : JOB16975: status = OUTPUT
+2019/06/05 13:36:01 : JOB16975: ended with Return Code = 0004
+2019/06/05 13:36:03 : JOB16975: outlist downloaded successfully.
+2019/06/05 13:36:03 : JOB16975: ftp exiting .... ok!
+2019/06/05 13:36:03 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:36:03 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:36:03 : Transfer type changing to Ascii .... completed
+2019/06/05 13:36:03 : Cwd one directory up ... completed
+2019/06/05 13:36:03 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:36:03 : Transfer mode changing to Jes .... completed
+2019/06/05 13:36:03 : TESTSUB:  submitted successfully!
+2019/06/05 13:36:06 : JOB16980: status = OUTPUT
+2019/06/05 13:36:06 : JOB16980: ended with Return Code = 0004
+2019/06/05 13:36:08 : JOB16980: outlist deleted on Z/OS
+2019/06/05 13:36:08 : JOB16980: ftp exiting .... ok!
+2019/06/05 13:36:08 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:36:08 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:36:08 : Transfer type changing to Ascii .... completed
+2019/06/05 13:36:08 : Cwd one directory up ... completed
+2019/06/05 13:36:08 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:36:08 : Transfer mode changing to Jes .... completed
+2019/06/05 13:36:08 : TESTSUB:  submitted successfully!
+2019/06/05 13:36:11 : JOB16982: status = ACTIVE
+2019/06/05 13:36:14 : JOB16982: status = OUTPUT
+2019/06/05 13:36:14 : JOB16982: ended with Return Code = 0004
+2019/06/05 13:36:15 : JOB16982: outlist deleted on Z/OS
+2019/06/05 13:36:15 : TESTSUB: Trying to cancel Job ...
+2019/06/05 13:36:15 : TESTSUB: Cancel failed!
+2019/06/05 13:36:15 : JOB16982: ftp exiting .... ok!
+2019/06/05 13:36:15 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:36:15 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:36:15 : Transfer type changing to Ascii .... completed
+2019/06/05 13:36:15 : Cwd one directory up ... completed
+2019/06/05 13:36:15 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:36:15 : Transfer mode changing to Jes .... completed
+2019/06/05 13:36:15 : LOAUNL:  submitted successfully!
+2019/06/05 13:36:18 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:36:18 : JOB16995: status = INPUT 
+2019/06/05 13:36:19 : JOB16995: Cancel successful!
+2019/06/05 13:36:19 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:36:19 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:36:19 : Transfer type changing to Ascii .... completed
+2019/06/05 13:36:19 : Cwd one directory up ... completed
+2019/06/05 13:37:28 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:37:28 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:37:28 : Transfer type changing to Ascii .... completed
+2019/06/05 13:37:28 : Transfer mode changing to Jes .... completed
+2019/06/05 13:37:28 : FREEZE:  submitted successfully!
+2019/06/05 13:37:31 : JOB17031: status = OUTPUT
+2019/06/05 13:37:31 : JOB17031: ended with Return Code = 0004
+2019/06/05 13:37:33 : JOB17031: outlist downloaded successfully.
+2019/06/05 13:37:33 : JOB17031: ftp exiting .... ok!
+2019/06/05 13:37:33 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:37:33 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:37:33 : Transfer type changing to Ascii .... completed
+2019/06/05 13:37:33 : Cwd one directory up ... completed
+2019/06/05 13:37:33 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:37:33 : Transfer mode changing to Jes .... completed
+2019/06/05 13:37:33 : TESTSUB:  submitted successfully!
+2019/06/05 13:37:36 : JOB17032: status = OUTPUT
+2019/06/05 13:37:36 : JOB17032: ended with Return Code = 0004
+2019/06/05 13:37:37 : JOB17032: outlist deleted on Z/OS
+2019/06/05 13:37:37 : JOB17032: ftp exiting .... ok!
+2019/06/05 13:37:37 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:37:37 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:37:37 : Transfer type changing to Ascii .... completed
+2019/06/05 13:37:37 : Cwd one directory up ... completed
+2019/06/05 13:37:37 : Download U764.SOURCE.PDS(TESTSUB) ... completed
+2019/06/05 13:37:37 : Transfer mode changing to Jes .... completed
+2019/06/05 13:37:37 : TESTSUB:  submitted successfully!
+2019/06/05 13:37:40 : JOB17033: status = OUTPUT
+2019/06/05 13:37:40 : JOB17033: ended with Return Code = 0004
+2019/06/05 13:37:42 : JOB17033: outlist deleted on Z/OS
+2019/06/05 13:37:42 : TESTSUB: Trying to cancel Job ...
+2019/06/05 13:37:42 : TESTSUB: Cancel failed!
+2019/06/05 13:37:42 : JOB17033: ftp exiting .... ok!
+2019/06/05 13:37:42 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:37:42 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:37:42 : Transfer type changing to Ascii .... completed
+2019/06/05 13:37:42 : Cwd one directory up ... completed
+2019/06/05 13:37:42 : Download U764.SOURCE.PDS(LINKDB2) ... completed
+2019/06/05 13:37:42 : Transfer mode changing to Jes .... completed
+2019/06/05 13:37:42 : LOAUNL:  submitted successfully!
+2019/06/05 13:37:45 : LOAUNL: Trying to cancel Job ...
+2019/06/05 13:37:45 : JOB17034: status = OUTPUT
+2019/06/05 13:37:45 : JOB17034: ended with Return Code = 0004
+2019/06/05 13:37:46 : JOB17034: Cancel successful!
+2019/06/05 13:37:46 : TCPFTP1 IBM FTP CS V2R3 at proda, 13:37:46 on 2019-06-05.
+Connection will close if idle for more than 30 minutes.
+2019/06/05 13:37:46 : Transfer type changing to Ascii .... completed
+2019/06/05 13:37:46 : Cwd one directory up ... completed

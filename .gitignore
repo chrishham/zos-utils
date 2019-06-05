@@ -1,6 +1,5 @@
 node_modules
 *.tgz
-outlist.txt
-log.txt
 .nyc_output
 package-lock.json
+/test/output/
