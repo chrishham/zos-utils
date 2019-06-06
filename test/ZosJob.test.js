@@ -167,3 +167,9 @@ describe('Should reject invalid JCL source', function () {
     job.sub().should.be.rejected.notify(done)
   })
 })
+
+describe.skip('Should succesfully resubmit a job', function () {
+  it('Should succesfully resubmit a job', function (done) {
+
+  })
+})
