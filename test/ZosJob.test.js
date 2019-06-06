@@ -104,7 +104,7 @@ COUNT FROM(INDD) EMPTY
       '/*'
     let job = new ZosJob({ jcl, ftpLogin, options })
     job.sub().should.eventually.be.ok.notify(done)
-    options.loggingFunction = debug('./')
+    options.loggingFunction = debug(path.join(__dirname, 'output'))
   })
 })
 
@@ -127,7 +127,7 @@ describe('Submitting Job From hostFile', function () {
     name: 'TESTSUB',
     description: 'Έλεγχος για την ύπαρξη του αρχείου. ',
     RC: '0004',
-    source: 'U764.SOURCE.PDS(TESTSUB)'
+    source: `${ftpLogin.user}.SOURCE.PDS(TESTSUB)`
   }
   it('should end up with RC=0004', async function () {
     options.deleteMainframeOutlist = true
@@ -147,7 +147,7 @@ describe('Submitting Job From hostFile', function () {
     job.cancel().should.be.rejected.notify(done)
   })
   it('should cancel job that is running', function (done) {
-    jcl.source = 'U764.SOURCE.PDS(LINKDB2)' // long running function
+    jcl.source = `${ftpLogin.user}.SOURCE.PDS(LINKDB2)` // long running function
     jcl.name = 'LOAUNL'
     let job = new ZosJob({ jcl, ftpLogin, options })
     job.sub().catch(() => { })
