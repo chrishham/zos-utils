@@ -1,10 +1,10 @@
 const path = require('path')
 const fs = require('fs-extra')
+const chalk = require('chalk')
+const logError = message => console.log(chalk.bold.bgRed('\n' + message + '\n'))
 const { ZosJob } = require('../lib/index.js')
 const chai = require('chai')
-const chaiAsPromised = require('chai-as-promised')
 const debug = require('./debug')
-chai.use(chaiAsPromised)
 chai.should()
 
 let ftpLogin = {
@@ -14,6 +14,15 @@ let ftpLogin = {
   port: process.env.ZOS_FTP_PORT // Number: OPTIONAL, defaults to 21.
 }
 
+if (!ftpLogin.user ||
+  !ftpLogin.pwd ||
+  !ftpLogin.host ||
+  !ftpLogin.port
+) {
+  logError('Please set Environment Variables : ZOS_FTP_* .')
+  process.exit(1)
+}
+
 let options = {
   encoding: 'ISO8859-7', // String: OPTIONAL, defaults to 'UTF8'
   watchJobInterval: 1000,
@@ -21,144 +30,143 @@ let options = {
   deleteMainframeOutlist: false // default= true
 }
 
-before(function (done) {
-  if (!ftpLogin.user ||
-    !ftpLogin.pwd ||
-    !ftpLogin.host ||
-    !ftpLogin.port
-  ) {
-    console.log('Please assign ZOS_FTP_* environment variables.')
-    process.exit(1)
-  }
+const jobStatement = process.env.ZOS_JOB_STATEMENT
+
+if (!jobStatement) {
+  logError('Please set Environment Variable : ZOS_JOB_STATEMENT .')
+  process.exit(1)
+}
+
+const basicJCL = `${jobStatement} \n// EXEC PGM=IEFBR14`
+
+before(() => {
   return fs.remove(options.outlistLocalPath)
-    .then(() => fs.mkdirp(options.outlistLocalPath))
-    .then(() => {
+    .then(async () => {
+      await Promise.all([
+        fs.mkdirp(options.outlistLocalPath),
+        fs.writeFile(path.join(__dirname, 'local.jcl'), basicJCL.replace(/\n/g, '\r\n'))
+      ])
       options.loggingFunction = debug(path.join(__dirname, 'output'))
-    }).should.be.ok.notify(done)
+    })
+    .catch(error => console.log('Error at Before Hook:', error.message))
 })
 
-describe('Submitting Job From string', function () {
+describe('Submitting Job from string.', () => {
   let jcl = {
-    name: 'ISEMPTY',
-    description: 'Έλεγχος για την ύπαρξη του αρχείου. ',
-    source:
-      `
-//${ftpLogin.user}E JOB (SYSS,${ftpLogin.user},${ftpLogin.user})
-//******************************************
-//* Έλεγχος για την ύπαρξη του αρχείου.
-//  EXEC PGM=ICETOOL                        
-//TOOLMSG DD SYSOUT=X                    
-//DFSMSG DD SYSOUT=X                  
-//INDD DD DSN=${ftpLogin.user}.APROV.DATA,DISP=SHR 
-//TOOLIN DD *                          
-COUNT FROM(INDD) EMPTY                 
-/*`,
+    name: 'BASIC',
+    description: 'Basic Jcl',
+    source: basicJCL,
     RC: '0000'
   }
-  it('should end up with RC=0000', async function () {
+
+  it('should end up with RC=0000', async () => {
     try {
-      let job = new ZosJob({ jcl, ftpLogin, options })
+      let job = new ZosJob({ jcl: Object.assign({}, jcl), ftpLogin, options })
       await job.sub()
       job.RC.should.be.equal('0000')
     } catch (error) {
-      console.error(error.message)
+      let message = error.message
+      if (/PASS command failed/.test(message)) {
+        message = `Failed to connect (User:${ftpLogin.user} / Password : ${ftpLogin.pwd}).`
+      } else message += ' Please check ZOS_JOB_STATEMENT.'
+      logError(message)
       process.exit(1)
     }
   })
-  it('Cannot resubmit job while it is running', function (done) {
-    let job = new ZosJob({ jcl, ftpLogin, options })
-    job.sub().then(() => { })
-    job.sub().should.be.rejected.notify(done)
+
+  it('Cannot resubmit job while it is running', () => {
+    let job = new ZosJob({ jcl: Object.assign({}, jcl), ftpLogin, options })
+    job.sub()
+    return job.sub()
+      .then(
+        () => { throw new Error() },
+        () => { }
+      )
   })
-  it('should end with JCL Error', function (done) {
-    jcl.source =
-      `
-//${ftpLogin.user}E JOB (SYSS,${ftpLogin.user},${ftpLogin.user})
-//******************************************
-//* Έλεγχος για την ύπαρξη του αρχείου.
-/  EXEC PGM=ICETOOL                        
-//TOOLMSG DD SYSOUT=X                    
-//DFSMSG DD SYSOUT=X                  
-//INDD DD DSN=${ftpLogin.user}.APROV.DATA,DISP=SHR 
-//TOOLIN DD *                          
-COUNT FROM(INDD) EMPTY                 
-/*`
+
+  it('should end with JCL Error', () => {
+    jcl.source = `${jobStatement} \n/  EXEC PGM=ICETOOL`
     ftpLogin.port = null
     options.encoding = null
-    let job = new ZosJob({ jcl, ftpLogin, options })
-    job.sub().should.eventually.be.ok.notify(done)
+    let job = new ZosJob({ jcl: Object.assign({}, jcl), ftpLogin, options })
+    return job.sub()
+      .then(
+        () => { throw new Error() },
+        () => { job.RC.should.be.equal('JCL Error') }
+      )
   })
-  it('JCL should fail to submit', async function () {
+
+  it('JCL should fail to submit', () => {
     jcl.source =
       `
 //JOB Destined to fail
 //`
-    let job = new ZosJob({ jcl, ftpLogin, options })
-    try {
-      await job.sub()
-    } catch (error) {
-      error.message.should.be.equal('Jcl Failed to Submit.')
-    }
+    let job = new ZosJob({ jcl: Object.assign({}, jcl), ftpLogin, options })
+    return job.sub()
+      .then(
+        () => { throw new Error('JCL passed instead of failing') },
+        () => { job.RC.should.be.equal('Jcl Failed to Submit.') }
+      )
   })
-  it('Check string \r\n line ending', function (done) {
+
+  it('Check string \\r\\n line ending', () => {
     options.encoding = 'ISO8859-7'
     options.loggingFunction = null
     options.watchJobInterval = null
     jcl.source =
-      `//${ftpLogin.user}E JOB (SYSS,${ftpLogin.user},${ftpLogin.user})` + '\r\n' +
+      `${jobStatement}` + '\r\n' +
       '//******************************************' + '\r\n' +
-      '//* Έλεγχος για την ύπαρξη του αρχείου.' + '\r\n' +
-      '//  EXEC PGM=ICETOOL' + '\r\n' +
-      '//TOOLMSG DD SYSOUT=X' + '\r\n' +
-      '//DFSMSG DD SYSOUT=X' + '\r\n' +
-      `//INDD DD DSN=${ftpLogin.user}.APROV.DATA,DISP=SHR` + '\r\n' +
-      '//TOOLIN DD *' + '\r\n' +
-      'COUNT FROM(INDD) EMPTY' + '\r\n' +
-      '/*'
-    let job = new ZosJob({ jcl, ftpLogin, options })
-    job.sub().should.eventually.be.ok.notify(done)
+      '//* Testing string \\r\\n line ending..' + '\r\n' +
+      '// EXEC PGM=IEFBR14'
+    let job = new ZosJob({ jcl: Object.assign({}, jcl), ftpLogin, options: Object.assign({}, options) })
     options.loggingFunction = debug(path.join(__dirname, 'output'))
+    return job.sub()
   })
 })
 
-describe('Submitting Job From localFile', function () {
+describe.only('Submitting Job from localFile', () => {
   let jcl = {
-    name: 'FREEZE',
-    description: 'Έλεγχος για την ύπαρξη του αρχείου. ',
-    RC: '0004',
+    name: 'BASIC',
+    description: 'Basic Jcl',
+    RC: '0000',
     source: path.resolve(__dirname, 'local.jcl') // Absolute path of local file ,has to be utf8 and \r\n
   }
-  it('should end up with RC=0004', async function () {
+
+  it('should end up with RC=0000', async () => {
     let job = new ZosJob({ jcl, ftpLogin, options })
     await job.sub()
-    job.RC.should.be.equal('0004')
+    job.RC.should.be.equal('0000')
   })
 })
 
 describe('Submitting Job From hostFile', function () {
   let jcl = {
     name: 'TESTSUB',
-    description: 'Έλεγχος για την ύπαρξη του αρχείου. ',
-    RC: '0004',
+    description: 'Check for host file existence.. ',
+    RC: '0000',
     source: `${ftpLogin.user}.SOURCE.PDS(TESTSUB)`
   }
-  it('should end up with RC=0004', async function () {
+
+  it('should end up with RC=0000', async function () {
     options.deleteMainframeOutlist = true
     options.outlistLocalPath = null
     let job = new ZosJob({ jcl, ftpLogin, options })
     await job.sub()
-    job.RC.should.be.equal('0004')
+    job.RC.should.be.equal('0000')
   })
-  it('should fail if expected RC=0000', function (done) {
+
+  it('should fail if expected RC=0004', function (done) {
     options.deleteMainframeOutlist = true
-    jcl.RC = '0000'
+    jcl.RC = '0004'
     let job = new ZosJob({ jcl, ftpLogin, options })
     job.sub().should.be.rejected.notify(done)
   })
+
   it('should not cancel job that is not running', function (done) {
     let job = new ZosJob({ jcl, ftpLogin, options })
     job.cancel().should.be.rejected.notify(done)
   })
+
   it('should cancel job that is running', function (done) {
     jcl.source = `${ftpLogin.user}.SOURCE.PDS(LINKDB2)` // long running function
     jcl.name = 'LOAUNL'
@@ -172,7 +180,7 @@ describe('Should reject invalid JCL source', function () {
   it('Should reject invalid JCL source', function (done) {
     let jcl = {
       name: 'LINKDB2',
-      description: 'Έλεγχος για την ύπαρξη του αρχείου. ',
+      description: 'Check for host file existence.. ',
       RC: '0004',
       source: 'this is not a jcl'
     }

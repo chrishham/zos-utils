@@ -1,6 +1,7 @@
 node_modules
+package-lock.json
 *.tgz
 .nyc_output
 package-lock.json
 /test/output/
-local.jcl
+/test/local.jcl

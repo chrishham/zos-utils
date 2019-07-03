@@ -1,5 +1,8 @@
 ==> Change Job Names to be nbg Free
-==> write instructions fro testing
+==> write instructions for testing
 ==> create README
 ==> add license
-==> add fields to package.json(author,licence,repository etc)
+==> add fields to package.json(author,licence,repository,keywords etc)
+==> publish to npm
+
+//U764T JOB (SYSS,U764,U764)

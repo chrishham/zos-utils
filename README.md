@@ -1,8 +1,9 @@
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 
 # z/OS Utils
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-Easy
+Submit JCLs to z/OS from String/Local File/Host File.
 
 ## Getting Started
 
