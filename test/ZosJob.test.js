@@ -22,6 +22,14 @@ let options = {
 }
 
 before(function (done) {
+  if (!ftpLogin.user ||
+    !ftpLogin.pwd ||
+    !ftpLogin.host ||
+    !ftpLogin.port
+  ) {
+    console.log('Please assign ZOS_FTP_* environment variables.')
+    process.exit(1)
+  }
   return fs.remove(options.outlistLocalPath)
     .then(() => fs.mkdirp(options.outlistLocalPath))
     .then(() => {
@@ -48,9 +56,14 @@ COUNT FROM(INDD) EMPTY
     RC: '0000'
   }
   it('should end up with RC=0000', async function () {
-    let job = new ZosJob({ jcl, ftpLogin, options })
-    await job.sub()
-    job.RC.should.be.equal('0000')
+    try {
+      let job = new ZosJob({ jcl, ftpLogin, options })
+      await job.sub()
+      job.RC.should.be.equal('0000')
+    } catch (error) {
+      console.error(error.message)
+      process.exit(1)
+    }
   })
   it('Cannot resubmit job while it is running', function (done) {
     let job = new ZosJob({ jcl, ftpLogin, options })
