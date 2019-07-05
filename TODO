@@ -1,4 +1,7 @@
 ==> Change Job Names to be nbg Free
+==> Put file to host
+==> add sinon to tests
+==> move global variables to env file
 ==> write instructions for testing
 ==> create README
 ==> add license

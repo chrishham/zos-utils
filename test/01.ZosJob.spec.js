@@ -1,10 +1,11 @@
 const path = require('path')
 const fs = require('fs-extra')
+const chai = require('chai')
 const chalk = require('chalk')
 const logError = message => console.log(chalk.bold.bgRed('\n' + message + '\n'))
 const { ZosJob } = require('../lib/index.js')
-const chai = require('chai')
 const debug = require('./debug')
+
 chai.should()
 
 let ftpLogin = {
@@ -51,7 +52,7 @@ before(() => {
     .catch(error => console.log('Error at Before Hook:', error.message))
 })
 
-describe('Submitting Job from string.', () => {
+describe.only('Submitting Job from string.', () => {
   let jcl = {
     name: 'BASIC',
     description: 'Basic Jcl',
