@@ -1,13 +1,17 @@
 {
   "name": "zos-utils",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",
     "test": "eslint . --fix && nyc mocha --timeout 30000 --slow 15000"
   },
-  "keywords": [],
+  "keywords": [
+    "z/os",
+    "jcl",
+    "mainframe"
+  ],
   "author": "Christopher Chamaletsos",
   "license": "MIT",
   "dependencies": {
@@ -20,6 +24,7 @@
   "devDependencies": {
     "chai": "^4.2.0",
     "chalk": "^2.4.2",
+    "dotenv": "^8.0.0",
     "eslint": "^6.0.1",
     "eslint-config-standard": "^12.0.0",
     "eslint-plugin-import": "^2.18.0",

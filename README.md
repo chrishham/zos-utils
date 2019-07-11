@@ -1,20 +1,31 @@
 
 
 # z/OS Utils
-[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-Submit JCLs to z/OS from String/Local File/Host File.
+z/OS Utils for nodejs developers.
 
-## Getting Started
+Features:
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
+* Submit a Job and and get a Promise that resolves to execution outlist.
+* Get/Put a dataset or PDS member from/to mainframe.
+
+z/OS Utils takes advantage of the ability to [submit jobs to Mainframe via ftp](https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.1.0/com.ibm.zos.v2r1.halu001/intfjes.htm).
 
 ### Prerequisites
 
-What things you need to install the software and how to install them
+Minimum supported node version : v8.2.1
+
+Your z/OS UserId should have ftp access enabled by your Sys Admins.
+
+## Getting Started
 
 ```
-Give examples
+npm i zos-utils
+```
+
+In your code :
+```
+
 ```
 
 ### Installing
@@ -36,8 +47,15 @@ until finished
 End with an example of getting some data out of the system or using it for a little demo
 
 ## Running the tests
+Create a ```.env``` file at the root of the project and assign the following global variables:
 
-Explain how to run the automated tests for this system
+```
+ZOS_FTP_USERNAME= ...
+ZOS_FTP_PASSWD=...
+ZOS_FTP_HOST=....
+ZOS_FTP_PORT=...
+ZOS_JOB_STATEMENT=... - The minimal JOB statement needed by your installation to run
+```
 
 ### Break down into end to end tests
 
@@ -46,24 +64,6 @@ Explain what these tests test and why
 ```
 Give an example
 ```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
-## Deployment
-
-Add additional notes about how to deploy this on a live system
-
-## Built With
-
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
 
 ## Contributing
 
@@ -75,7 +75,7 @@ We use [SemVer](http://semver.org/) for versioning. For the versions available, 
 
 ## Authors
 
-* **Billie Thompson** - *Initial work* - [PurpleBooth](https://github.com/PurpleBooth)
+* **Christopher Chamaletsos** 
 
 See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
 
