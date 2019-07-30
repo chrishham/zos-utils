@@ -6,7 +6,7 @@ module.exports = function (outlist) {
     flags: 'a' // 'a' means appending (old data will be preserved)
   })
 
-  function debug (msg) {
+  async function debug (msg) {
     if (typeof msg === 'object') {
       msg = JSON.stringify(msg)
     }

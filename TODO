@@ -1,11 +1,28 @@
-==> Change Job Names to be nbg Free
-==> Put file to host
+==> Put file to host (PDS and dataset)
+
+
 ==> add sinon to tests
-==> move global variables to env file
+
+
 ==> write instructions for testing
 ==> create README
-==> add license
+
+
 ==> add fields to package.json(author,licence,repository,keywords etc)
-==> publish to npm
 
 //U764T JOB (SYSS,U764,U764)
+
+
+Put
+=====
+==> check support for large files
+
+CreatePDS
+=====
+
+
+
+README
+======
+
+String line ending has to be consistent either /n or /r/n.
