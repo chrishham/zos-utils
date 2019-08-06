@@ -1,17 +1,15 @@
-require('dotenv').config()
-const path = require('path')
-const fs = require('fs-extra')
-const chai = require('chai')
-const chalk = require('chalk')
-const logError = message => console.log(chalk.bold.bgRed('\n' + message + '\n'))
-const debug = require('./debug')
-const zosUtils = require('../lib/index.js')
 
+require('dotenv').config()
+const fs = require('fs-extra')
+const path = require('path')
+const chalk = require('chalk')
+const debug = require('./debug')
+global.logError = message => console.log(chalk.bold.bgRed('\n' + message + '\n'))
+const chai = require('chai')
 chai.should()
 
-const outlistLocalPath = path.join(__dirname, 'output')
-
-const jobStatement = process.env.ZOS_JOB_STATEMENT
+global.outlistLocalPath = path.join(__dirname, 'output')
+global.jobStatement = process.env.ZOS_JOB_STATEMENT
 
 if (!jobStatement) {
   logError('Please set Environment Variable : ZOS_JOB_STATEMENT .')
@@ -20,7 +18,7 @@ if (!jobStatement) {
 
 fs.emptyDirSync(outlistLocalPath)
 
-let config = {
+global.config = {
   user: process.env.ZOS_FTP_USERNAME, // String: REQUIRED
   password: process.env.ZOS_FTP_PASSWD, // String: REQUIRED
   host: process.env.ZOS_FTP_HOST, // String: REQUIRED
@@ -40,13 +38,3 @@ if (!config.user ||
   logError('Please set Environment Variables : ZOS_FTP_* .')
   process.exit(1)
 }
-
-const { ZosFtp } = zosUtils(config)
-
-ZosFtp.put(path.resolve(__dirname, 'local.jcl'), 'U764.VANILLIA.PDS(GANGSTER)')
-  .then(() => console.log('MAIN: Success!'))
-  .catch(error => console.log('MAIN:', error.message))
-
-ZosFtp.put(path.resolve(__dirname, 'local.jcl'), 'GANGSTER')
-  .then(() => console.log('MAIN: Success!'))
-  .catch(error => console.log('MAIN:', error.message))

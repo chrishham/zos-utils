@@ -6,3 +6,4 @@ package-lock.json
 /test/output/
 /test/local.jcl
 *.env
+local*

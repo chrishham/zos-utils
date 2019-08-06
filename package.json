@@ -5,7 +5,7 @@
   "main": "lib/index.js",
   "scripts": {
     "start": "node lib/index.js",
-    "test": "eslint . --fix && nyc mocha --timeout 30000 --slow 15000"
+    "test": "eslint . --fix && nyc mocha --timeout 70000 --slow 15000"
   },
   "keywords": [
     "z/os",

@@ -25,4 +25,4 @@ CreatePDS
 README
 ======
 
-String line ending has to be consistent either /n or /r/n.
+String line endings has to be consistent either /n or /r/n.
