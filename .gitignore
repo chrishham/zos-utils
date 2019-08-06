@@ -7,3 +7,4 @@ package-lock.json
 /test/local.jcl
 *.env
 local*
+coverage
