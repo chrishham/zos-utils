@@ -1,24 +1,17 @@
-==> Put file to host (PDS and dataset)
+TODO
+=================
+==> create a long running function for cancel to work.
 
 
 ==> add sinon to tests
 
 
 ==> write instructions for testing
-==> create README
+
 
 
 ==> add fields to package.json(author,licence,repository,keywords etc)
 
-//U764T JOB (SYSS,U764,U764)
-
-
-Put
-=====
-==> check support for large files
-
-CreatePDS
-=====
 
 
 

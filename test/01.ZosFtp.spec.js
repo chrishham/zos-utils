@@ -2,9 +2,18 @@ const path = require('path')
 const zosUtils = require('../lib/index.js')
 const { ZosFtp } = zosUtils(config)
 
-describe('FTP:delete Host files', () => {
+describe('FTP: Delete Host files', () => {
   it('should delete host file', async () => {
-    return ZosFtp.del(`${config.user}.ZOSUTILS.FILE`)
+    try {
+      await ZosFtp.del(`${config.user}.ZOSUTILS.FILE`)
+    } catch (error) {
+      let message = error.message
+      if (/PASS command failed/.test(message)) {
+        message = `Failed to connect (User:${config.user} / Password : ${config.password}).`
+      }
+      logError(message)
+      process.exit(1)
+    }
   })
 
   it('should delete pds library', async () => {
@@ -34,7 +43,7 @@ describe('FTP: Put files to Host', () => {
   })
 })
 
-describe('FTP:get files from Host', () => {
+describe('FTP: Get files from Host', () => {
   it('should get pds member to local dataset', async () => {
     return ZosFtp.get(`${config.user}.ZOSUTILS.PDS(BASIC)`, path.resolve(__dirname, 'output', 'BASIC.txt'))
   })
