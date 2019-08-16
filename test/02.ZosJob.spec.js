@@ -97,7 +97,6 @@ describe('SubJob: Submitting Job from string.', () => {
 
   it('should cancel job that is running', function (done) {
     jcl.source = `${jobStatement} \n// EXEC PGM=IKJEFT1B\n` +
-      '//STEP0020  EXEC  PGM=IKJEFT1B\n' +
       '//SYSEXEC   DD  UNIT=SYSALLDA,SPACE=(80,(5,1)),\n' +
       '//          DSN=&SYSEXEC,\n' +
       '//          AVGREC=K,DSNTYPE=LIBRARY,\n' +
