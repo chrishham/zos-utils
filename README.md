@@ -4,7 +4,7 @@
 
 z/OS Utils for nodejs developers. 
 
-Two main functions:
+Two main Objects:
 
 __1. ZosJob :__ Submit a Job and get a promise , that resolves to execution's outlist.
 
@@ -47,13 +47,12 @@ let config = {
   user: 'ZOS_FTP_USERNAME',      // String: REQUIRED
   password: 'ZOS_FTP_PASSWD',    // String: REQUIRED
   host: 'ZOS_FTP_HOST',          // String: REQUIRED, host's IP address 
-  port: 'ZOS_FTP_PORT',          // Number: OPTIONAL, defaults to 21.
-  jobStatement: 'Minimal job card needed by your installation for a JCL to run' //String : REQUIRED for ZosFtp.put to work e.g. //U001T JOB (SYSS,U001,U001)
+  port: 'ZOS_FTP_PORT'           // Number: OPTIONAL, defaults to 21.
 }
 
 let { ZosJob, ZosFtp } = zosUtils(config)
 ```
-Now you have available both ```ZosJob & ZosFtp ``` functions.
+Now you have available both ```ZosJob & ZosFtp ``` Objects.
 
 Try to submit a jcl that resides at mainframe , e.g. : ```'U001.ZOSUTILS.PDS(TESTJCL)'```
 
@@ -89,7 +88,7 @@ ZOS_FTP_PASSWD='my_password'
 ZOS_FTP_HOST='host_ip_address'
 ZOS_FTP_PORT='host_port'
 ZOS_ENCODING='host_encoding'
-ZOS_JOB_STATEMENT='//jobName JOB (SYSS,userId,userId)' # Minimal JOB statement needed by your installation for JCL to run 
+ZOS_JOB_STATEMENT='//jobName JOB (SYSS,userId,userId)' # Minimal JOB statement needed by your z/OS installation for JCL to run 
 ```
 Then issue the test command:
 
