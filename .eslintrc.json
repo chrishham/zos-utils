@@ -16,7 +16,8 @@
     "config": "readonly",
     "jobStatement": "readonly",
     "outlistLocalPath": "readonly",
-    "logError": "readonly"
+    "logError": "readonly",
+    "sinon": "readonly"
   },
   "parserOptions": {
     "ecmaVersion": 2018

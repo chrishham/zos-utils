@@ -5,6 +5,8 @@ const path = require('path')
 const chalk = require('chalk')
 const debug = require('./debug')
 global.logError = message => console.log(chalk.bold.bgRed('\n' + message + '\n'))
+const sinon = require('sinon')
+global.sinon = sinon
 const chai = require('chai')
 chai.should()
 

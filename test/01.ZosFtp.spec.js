@@ -2,6 +2,7 @@ const path = require('path')
 const zosUtils = require('../lib/index.js')
 const { ZosFtp } = zosUtils(config)
 const fs = require('fs-extra')
+// const PromiseFtp = require('promise-ftp')
 
 if (!fs.existsSync(path.join(__dirname, 'bigFile.txt'))) {
   let string = 'This is a really big file!\r\n'
@@ -16,7 +17,9 @@ describe('ZosFtp Test Suite', () => {
       try {
         await ZosFtp.del(`${config.user}.ZOSUTILS.FILE`)
         await ZosFtp.del(`${config.user}.ZOSUTILS.BIGFILE`)
-        await ZosFtp.del(`${config.user}.ZOSUTILS.STRING`)
+        await ZosFtp.del(`${config.user}.ZOSUTILS.NOOP`)
+        await ZosFtp.del('ZOSUTILS.STRING')
+        await ZosFtp.del('NON.EXISTENT.PDS')
       } catch (error) {
         let message = error.message
         if (/PASS command failed/.test(message)) {
@@ -45,8 +48,13 @@ describe('ZosFtp Test Suite', () => {
     it('should put local file to z/OS dataset', async () => {
       return ZosFtp.put(path.resolve(__dirname, 'local.jcl'), `${config.user}.ZOSUTILS.FILE`, {
         recfm: 'FB',
-        lrecl: 300
+        lrecl: 300,
+        cylinders: true
       })
+    })
+
+    it('should put local file to z/OS dataset - no options', async () => {
+      return ZosFtp.put(path.resolve(__dirname, 'local.jcl'), `ZOSUTILS.NOOP`)
     })
 
     it('should put big local file to z/OS dataset', async () => {
@@ -71,11 +79,17 @@ describe('ZosFtp Test Suite', () => {
       return ZosFtp.get(`${config.user}.ZOSUTILS.PDS(BASIC)`, path.resolve(__dirname, 'output', 'BASIC.txt'))
     })
     it('should get host file to local dataset', async () => {
-      return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`, path.resolve(__dirname, 'output', 'ZOSUTILS.txt'))
+      return ZosFtp.get(`ZOSUTILS.FILE`, path.resolve(__dirname, 'output', 'ZOSUTILS.txt'))
     })
     it('should get host file to javascript string', async () => {
       return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`)
-        .then(result => result.should.be.string)
+        .then(result => result.should.be.a('string'))
     })
+    // it.only('should throw an error', async () => {
+    //   sinon.stub(PromiseFtp.prototype, 'get').callsFake(() => {
+    //     return new Error('Trying to cover error lines')
+    //   })
+    //   return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`)
+    // })
   })
 })

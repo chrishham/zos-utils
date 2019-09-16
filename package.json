@@ -1,8 +1,9 @@
 {
   "name": "zos-utils",
   "version": "1.0.3",
-  "description": "",
+  "description": "z/OS : Submit jcl and common ftp operations for nodejs developers.",
   "main": "lib/index.js",
+  "repository":"https://github.com/chrishham/zos-utils.git",
   "scripts": {
     "start": "node lib/index.js",
     "test": "eslint . --fix && nyc --reporter=html --reporter=text mocha --timeout 70000 --slow 15000"
@@ -10,7 +11,8 @@
   "keywords": [
     "z/os",
     "jcl",
-    "mainframe"
+    "mainframe",
+    "submit"
   ],
   "author": "Christopher Chamaletsos",
   "license": "MIT",
@@ -32,6 +34,7 @@
     "eslint-plugin-promise": "^4.2.1",
     "eslint-plugin-standard": "^4.0.0",
     "mocha": "^6.1.4",
-    "nyc": "^14.1.1"
+    "nyc": "^14.1.1",
+    "sinon": "^7.4.2"
   }
 }
