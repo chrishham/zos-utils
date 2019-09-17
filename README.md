@@ -25,6 +25,8 @@ z/OS Utils takes advantage of the ability to [submit jobs to Mainframe via ftp](
 
 Minimum supported node version : v8.2.1
 
+Maximum supported node version : v9.11.2
+
 Your z/OS UserId should have ftp access.
 
 ## Getting Started

@@ -2,7 +2,6 @@ const path = require('path')
 const zosUtils = require('../lib/index.js')
 const { ZosFtp } = zosUtils(config)
 const fs = require('fs-extra')
-// const PromiseFtp = require('promise-ftp')
 
 if (!fs.existsSync(path.join(__dirname, 'bigFile.txt'))) {
   let string = 'This is a really big file!\r\n'
@@ -85,7 +84,7 @@ describe('ZosFtp Test Suite', () => {
       return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`)
         .then(result => result.should.be.a('string'))
     })
-    // it.only('should throw an error', async () => {
+    // it('should throw an error', async () => {
     //   sinon.stub(PromiseFtp.prototype, 'get').callsFake(() => {
     //     return new Error('Trying to cover error lines')
     //   })

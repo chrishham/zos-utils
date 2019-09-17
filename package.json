@@ -3,7 +3,7 @@
   "version": "1.0.3",
   "description": "z/OS : Submit jcl and common ftp operations for nodejs developers.",
   "main": "lib/index.js",
-  "repository":"https://github.com/chrishham/zos-utils.git",
+  "repository": "https://github.com/chrishham/zos-utils.git",
   "scripts": {
     "start": "node lib/index.js",
     "test": "eslint . --fix && nyc --reporter=html --reporter=text mocha --timeout 70000 --slow 15000"
