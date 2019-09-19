@@ -80,6 +80,9 @@ describe('ZosFtp Test Suite', () => {
     it('should get host file to local dataset', async () => {
       return ZosFtp.get(`ZOSUTILS.FILE`, path.resolve(__dirname, 'output', 'ZOSUTILS.txt'))
     })
+    it('should get big host file to local dataset', async () => {
+      return ZosFtp.get(`ZOSUTILS.BIGFILE`, path.resolve(__dirname, 'output', 'BIG_ZOSUTILS.txt'))
+    })
     it('should get host file to javascript string', async () => {
       return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`)
         .then(result => result.should.be.a('string'))

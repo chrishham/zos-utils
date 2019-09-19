@@ -22,6 +22,7 @@ describe('SubJob: Submitting Job from string.', () => {
       await job.sub()
       job.RC.should.be.equal('0000')
     } catch (error) {
+      console.log(error)
       let message = error.message
       if (/PASS command failed/.test(message)) {
         message = `Failed to connect (User:${config.user} / Password : ${config.password}).`
