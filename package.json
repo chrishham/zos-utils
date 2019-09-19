@@ -1,6 +1,6 @@
 {
   "name": "zos-utils",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "z/OS : Submit jcl and common ftp operations for nodejs developers.",
   "main": "lib/index.js",
   "repository": "https://github.com/chrishham/zos-utils.git",
