@@ -1,6 +1,6 @@
 {
   "name": "zos-utils",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "z/OS : Submit jcl and common ftp operations for nodejs developers.",
   "main": "lib/index.js",
   "repository": "https://github.com/chrishham/zos-utils.git",
@@ -20,7 +20,8 @@
     "detect-newline": "^3.0.0",
     "fs-extra": "^7.0.1",
     "iconv-lite": "^0.4.24",
-    "promise-ftp": "^1.3.5"
+    "promise-ftp": "^1.3.5",
+    "trim": "^0.0.1"
   },
   "devDependencies": {
     "chai": "^4.2.0",

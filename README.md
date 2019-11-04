@@ -17,13 +17,16 @@ __1. ZosJob :__ Submit a Job and get a promise , that resolves to execution's ou
 __2. ZosFtp :__ Ftp common operations.
 
 1. Get/Put/Del a dataset or PDS member from/to mainframe, e.g. : ```ZosFtp.del('U001.ZOSUTILS.FILE')```
+2. List Directories , e.g. : ```ZosFtp.list('U001.ZOSUTILS.PDS')```
 
 
 z/OS Utils takes advantage of the ability to [submit jobs to Mainframe via ftp](https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.1.0/com.ibm.zos.v2r1.halu001/intfjes.htm).
 
 ### Prerequisites
 
-Minimum supported node version : v8.2.1
+NodeJS version >= v8.2.1 .
+
+Works with latest NodeJS releases (v12.4.0 passes all the tests).
 
 Your z/OS UserId should have ftp access.
 
@@ -43,14 +46,14 @@ In your code :
 const zosUtils = require('zos-utils')
 
 // For a full list of config properties check the API section
-let config = {
+const config = {
   user: 'ZOS_FTP_USERNAME',      // String: REQUIRED
   password: 'ZOS_FTP_PASSWD',    // String: REQUIRED
   host: 'ZOS_FTP_HOST',          // String: REQUIRED, host's IP address 
   port: 'ZOS_FTP_PORT'           // Number: OPTIONAL, defaults to 21.
 }
 
-let { ZosJob, ZosFtp } = zosUtils(config)
+const { ZosJob, ZosFtp } = zosUtils(config)
 ```
 Now you have available both ```ZosJob & ZosFtp ``` Objects.
 
@@ -59,7 +62,7 @@ Try to submit a jcl that resides at mainframe , e.g. : ```'U001.ZOSUTILS.PDS(TES
 ```javascript
 let jcl = {
   name: 'TESTJCL',                      // String: REQUIRED, Assign a name to your job, used for logging and outlist save name
-  description: 'Basic Jcl with RC=4',   // String: Optional
+  description: 'Basic Jcl with RC=0',   // String: Optional
   source: 'U001.ZOSUTILS.PDS(TESTJCL)', // String: REQUIRED
   RC: '0000'                            // String: REQUIRED, Maximum expected return code
 }
@@ -76,8 +79,24 @@ job.sub(jcl)
 
 ```
 ## API
-
-#### Under construction
+```Javascript 
+const zosUtils = require('zos-utils')
+const { ZosJob, ZosFtp } = zosUtils(config)
+```
+Initialise ZosJob and ZosFtp by providing the config object:
+### ```Config```
+```JSON
+{
+  user: 'ZOS_FTP_USERNAME',      // String: REQUIRED
+  password: 'ZOS_FTP_PASSWD',    // String: REQUIRED
+  host: 'ZOS_FTP_HOST',          // String: REQUIRED, host's IP address 
+  port: 'ZOS_FTP_PORT'           // Number: OPTIONAL, defaults to 21.
+}
+```
+### ```ZosFtp```
+```Javascript 
+const { ZosFtp } = zosUtils(config)
+```
 
 
 ## Running the tests

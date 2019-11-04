@@ -17,8 +17,8 @@ describe('ZosFtp Test Suite', () => {
         await ZosFtp.del(`${config.user}.ZOSUTILS.FILE`)
         await ZosFtp.del(`${config.user}.ZOSUTILS.BIGFILE`)
         await ZosFtp.del(`${config.user}.ZOSUTILS.NOOP`)
-        await ZosFtp.del('ZOSUTILS.STRING')
-        await ZosFtp.del('NON.EXISTENT.PDS')
+        await ZosFtp.del(`${config.user}.ZOSUTILS.STRING`)
+        await ZosFtp.del(`${config.user}.NON.EXISTENT.PDS`)
       } catch (error) {
         let message = error.message
         if (/PASS command failed/.test(message)) {
@@ -53,7 +53,7 @@ describe('ZosFtp Test Suite', () => {
     })
 
     it('should put local file to z/OS dataset - no options', async () => {
-      return ZosFtp.put(path.resolve(__dirname, 'local.jcl'), `ZOSUTILS.NOOP`)
+      return ZosFtp.put(path.resolve(__dirname, 'local.jcl'), `${config.user}.ZOSUTILS.NOOP`)
     })
 
     it('should put big local file to z/OS dataset', async () => {
@@ -67,6 +67,7 @@ describe('ZosFtp Test Suite', () => {
       let sampleText = 'I need to have at list 1 newline character \r\n'
       for (let i = 0; i < 5; i++) { sampleText += sampleText }
       return ZosFtp.put(sampleText, `${config.user}.ZOSUTILS.STRING`, {
+        sourceType: 'string',
         recfm: 'FB',
         lrecl: 50
       })
@@ -78,10 +79,10 @@ describe('ZosFtp Test Suite', () => {
       return ZosFtp.get(`${config.user}.ZOSUTILS.PDS(BASIC)`, path.resolve(__dirname, 'output', 'BASIC.txt'))
     })
     it('should get host file to local dataset', async () => {
-      return ZosFtp.get(`ZOSUTILS.FILE`, path.resolve(__dirname, 'output', 'ZOSUTILS.txt'))
+      return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`, path.resolve(__dirname, 'output', 'ZOSUTILS.txt'))
     })
     it('should get big host file to local dataset', async () => {
-      return ZosFtp.get(`ZOSUTILS.BIGFILE`, path.resolve(__dirname, 'output', 'BIG_ZOSUTILS.txt'))
+      return ZosFtp.get(`${config.user}.ZOSUTILS.BIGFILE`, path.resolve(__dirname, 'output', 'BIG_ZOSUTILS.txt'))
     })
     it('should get host file to javascript string', async () => {
       return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`)
@@ -93,5 +94,12 @@ describe('ZosFtp Test Suite', () => {
     //   })
     //   return ZosFtp.get(`${config.user}.ZOSUTILS.FILE`)
     // })
+  })
+
+  describe('List Host Files', () => {
+    it('should list pds members', async () => {
+      return ZosFtp.list(`${config.user}.ZOSUTILS.PDS`)
+        .then(result => result.should.be.a('array'))
+    })
   })
 })
