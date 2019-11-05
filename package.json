@@ -1,7 +1,7 @@
 {
   "name": "zos-utils",
-  "version": "1.0.7",
-  "description": "z/OS : Submit jcl and common ftp operations for nodejs developers.",
+  "version": "1.0.9",
+  "description": "z/OS : JCL submission and common ftp operations, for NodeJS developers.",
   "main": "lib/index.js",
   "repository": "https://github.com/chrishham/zos-utils.git",
   "scripts": {
@@ -12,7 +12,9 @@
     "z/os",
     "jcl",
     "mainframe",
-    "submit"
+    "submit",
+    "JES",
+    "ftp"
   ],
   "author": "Christopher Chamaletsos",
   "license": "MIT",

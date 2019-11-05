@@ -6,7 +6,7 @@ z/OS Utils for NodeJS developers.
 
 This module exports two Objects:
 
-__1. [ZosJob](#ZosJob) :__ Submit a Job and get a promise , that resolves to execution's outlist.
+__1. [ZosJob](#zosjob) :__ Submit a Job and get a promise , that resolves to execution's outlist.
 
 1. Create a job from a jcl (string/ local file / pds member) : ```let job = new ZosJob(jcl)``` .
 2. Submit the Job with ```job.sub()``` and get back a Promise.
@@ -14,7 +14,7 @@ __1. [ZosJob](#ZosJob) :__ Submit a Job and get a promise , that resolves to exe
 4. Cancel job's execution at anytime , with ```job.cancel()```.
 
 
-__2. [ZosFtp](#ZosFtp) :__ Ftp common operations.
+__2. [ZosFtp](#zosftp) :__ Ftp common operations.
 
 1. Get/Put/Del a dataset or PDS member from/to mainframe, e.g. : ```ZosFtp.del('U001.ZOSUTILS.FILE')```
 2. List Directories , e.g. : ```ZosFtp.list('U001.ZOSUTILS.PDS')```
@@ -42,23 +42,23 @@ yarn add zos-utils
 ```
 
 In your code :
-```javascript
+```js
 const zosUtils = require('zos-utils')
 const config = {
   user: 'ZOS_FTP_USERNAME',      // String: REQUIRED
   password: 'ZOS_FTP_PASSWD',    // String: REQUIRED
   host: 'ZOS_FTP_HOST',          // String: REQUIRED, host's IP address 
-  port: 'ZOS_FTP_PORT'           // Number: OPTIONAL, defaults to 21.
+  port: ZOS_FTP_PORT           // Number: OPTIONAL, defaults to 21.
 }
 const { ZosJob, ZosFtp } = zosUtils(config)
 ```
 Now you have available both ```ZosJob & ZosFtp ``` Objects.
 
-For a full list of config properties check the [API](#API) section.
+For a full list of config properties check the [API](#api) section.
 
 Try to submit a jcl that resides at mainframe , e.g. : ```'U001.ZOSUTILS.PDS(TESTJCL)'```
 
-```javascript
+```js
 let jcl = {
   name: 'TESTJCL',                      // String: REQUIRED, Assign a name to your job, used for logging and outlist save name
   description: 'Basic Jcl with RC=0',   // String: Optional
@@ -75,7 +75,7 @@ try {
 }
 ```
 ## API
-```Javascript 
+```js 
 const zosUtils = require('zos-utils')
 const { ZosJob, ZosFtp } = zosUtils(config)
 ```
@@ -91,12 +91,12 @@ Initialise ZosJob and ZosFtp by providing the config object:
   * **loggingFunction**<_function_>: _Optional_. Handle / store logs the way you want, instead of logging them at the terminal. For example you can use ```test/debug.js``` module , to write to a file of your choice. **Default:** ```console.log```
 
 ### ZosJob
-```Javascript 
+```js 
 const zosUtils = require('zos-utils')
 const { ZosJob } = zosUtils(config)
 ```
 * Constructor : 
-```javascript 
+```js 
 let job = new ZosJob(jcl)
 ```
 
@@ -120,16 +120,17 @@ let job = new ZosJob(jcl)
 
 * ```ZosJob``` Methods
   * **sub**(): Submits the job to JES. Returned promise resolves to _outlist_ of the execution.
-    ```Javascript
+    ```js
     try {
       let outlist = await job.sub()
+      console.log(outlist)
       console.log('job.RC :',job.RC)
     } catch(error) {
       console.log(error)
     }  
     ```
   * **cancel**() : Cancel job submission. Returned promise resolves to _undefined_.
-    ```Javascript
+    ```js
     try {
       await job.cancel()
     } catch(error) {
@@ -138,25 +139,25 @@ let job = new ZosJob(jcl)
     ```
 * ```ZosJob``` Events
   * **'status-change'**: Emitted whenever job's running status changes e.g. from ```INPUT``` to ```ACTIVE```. 
-   ```Javascript
+   ```js
      job.on('status-change', newStatus => console.log(newStatus)) // 'ACTIVE'
    ```
-  * **'status-change'**: Emitted when JES assigns ID to job e.g. 'JOB19788'
-   ```Javascript
+  * **'job-id'**: Emitted when JES assigns ID to job e.g. 'JOB19788'
+   ```js
      job.on('job-id', jobId => console.log(jobId)) // 'JOB19788'
    ```
 ### ZosFtp
 * ```ZosFtp``` Methods
-  * **put** ( source <_string_>:**Required**, hostFile <_string_>:**Required**, options <_object_>:_Optional_): Put the local file or the Javascript String defined by ```source``` , to ```hostFile``` (it will be created if it doesnt exist). Returned promise resolves to _undefined_.
+  * **put** ( source <_string_>:**Required**, hostFile <_string_>:**Required**, options <_object_>:_Optional_): Put the local file or the Javascript String defined by ```source``` , to ```hostFile``` (it will be created if it doesn't exist). Returned promise resolves to _undefined_.
     * **options**
       * **sourceType**<_string_>: _Optional_. Can be either ```'localFile'``` or ```'string'```. **Default:** ```'localFile'``` 
       
          When one or more of the following keys is not provided,then the defaults from z/OS ```TCPIP.SEZAINST(FTPSDATA)``` server ftp configuration values will be applied. Keys are case insensitive, e.g. ```RECfm``` and ```recfm``` are both valid.
       * **recfm**<_string_>: _Optional_. ```'FB' || 'VB' || 'FBA'```
-      * **lrecl**<_number_>: _Optional_. The length of 1 row the  file.
+      * **lrecl**<_number_>: _Optional_. The length of 1 row of the  file.
       * **primary**<_number_>: _Optional_. The primary cyliders that will be allocated.
       * **directory**<_number_>: _Optional_. If provided then a PDS library will be created(if it doesn't already exist), with the directory blocks specified
-    ```Javascript
+    ```js
     try {
       // source can be a path to local file 
       await ZosFtp.put('C:\\local.txt','U001.ZOSUTILS.FILE')
@@ -170,7 +171,7 @@ let job = new ZosJob(jcl)
     ```
   * **get** ( hostFile <_string_>:**Required**, localFile <_string_>:_Optional_): Download the ```hostFile``` Dataset or PDS member to a ```localFile``` path. If ```localFile``` is omitted ,  then the Promise will resolve with the contents of the host File as a Javascript String.
 
-    ```Javascript
+    ```js
     try {
       // download hostFile to localFile
       await ZosFtp.get('U001.ZOSUTILS.FILE','C:\\local3.txt')
@@ -182,7 +183,7 @@ let job = new ZosJob(jcl)
     }  
     ```
   * **del** ( hostFile <_string_>:**Required**): Delete the ```hostFile``` Dataset or PDS member.
-    ```Javascript
+    ```js
     try {
       // delete dataset
       await ZosFtp.del('U001.ZOSUTILS.FILE')
@@ -194,7 +195,7 @@ let job = new ZosJob(jcl)
     }  
     ```
   * **list** ( hostPath <_string_>:**Required**): List dataset or PDS members defined by the ```hostpath``` variable.
-    ```Javascript
+    ```js
       try {
         // list pds members
         const result = await ZosFtp.list('U001.ZOSUTILS.PDS')
