@@ -4,6 +4,12 @@
 
 z/OS Utils for NodeJS developers. 
 
+![npm](https://img.shields.io/npm/v/zos-utils)
+![NPM](https://img.shields.io/npm/l/zos-utils)
+![npm](https://img.shields.io/npm/dw/zos-utils)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
+-----
 This module exports two Objects:
 
 __1. [ZosJob](#zosjob) :__ Submit a Job and get a promise , that resolves to execution's outlist.
@@ -232,7 +238,7 @@ yarn test
 
 * **Christopher Chamaletsos** 
 
-See also the list of [contributors](https://github.com/your/project/contributors) who participated in this project.
+See also the list of [contributors](https://github.com/chrishham/zos-utils/graphs/contributors) who participated in this project.
 
 ## License
 
