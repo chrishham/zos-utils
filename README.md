@@ -169,7 +169,7 @@ let job = new ZosJob(jcl)
       console.log(error)
     }  
     ```
-  * **get** ( hostFile <_string_>:**Required**, localFile <_string_>:_Optional_): Download the ```hostFile``` Dataset or PDS member to a ```localFile``` path. If ```localFile``` is omitted ,  then the Promise will resolve with the contents of the host File as a Javascript String.
+  * **get** ( hostFile <_string_>:**Required**, localFile <_string_>:_Optional_): Download the ```hostFile```z/OS dataset or PDS member to a ```localFile``` path. If ```localFile``` is omitted ,  then the Promise will resolve with the contents of the host file as a Javascript String.
 
     ```js
     try {
@@ -182,14 +182,10 @@ let job = new ZosJob(jcl)
       console.log(error)
     }  
     ```
-  * **del** ( hostFile <_string_>:**Required**): Delete the ```hostFile``` Dataset or PDS member.
+  * **del** ( hostFile <_string_>:**Required**): Delete the ```hostFile``` Dataset , PDS or PDS member.
     ```js
     try {
-      // delete dataset
       await ZosFtp.del('U001.ZOSUTILS.FILE')
-      // get contents of hostFile as a Javascript String.
-      const result = await ZosFtp.get('U001.ZOSUTILS.STRING')
-      console.log(result) // 'I am going to host!'
     } catch(error) {
       console.log(error)
     }  
@@ -197,7 +193,6 @@ let job = new ZosJob(jcl)
   * **list** ( hostPath <_string_>:**Required**): List dataset or PDS members defined by the ```hostpath``` variable.
     ```js
       try {
-        // list pds members
         const result = await ZosFtp.list('U001.ZOSUTILS.PDS')
         console.log(result) 
         // Header fields may differ from installation to installation.
@@ -208,7 +203,6 @@ let job = new ZosJob(jcl)
         //'TEST      01.01 2016/09/28 2016/09/28 13:04   181   180     0 U001    ',
         //'TRIAL     01.00 2019/11/05 2019/11/05 11:44     2     2     0 U001    '
         // ]
-      
       } catch(error) {
         console.log(error)
       }  
