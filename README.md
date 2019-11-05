@@ -28,6 +28,7 @@ __2. [ZosFtp](#zosftp) :__ Ftp common operations.
 
 z/OS Utils takes advantage of the ability to [submit jobs to Mainframe via ftp](https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.1.0/com.ibm.zos.v2r1.halu001/intfjes.htm).
 
+----
 ### Prerequisites
 
 NodeJS version >= **v8.2.1** .
@@ -35,6 +36,8 @@ NodeJS version >= **v8.2.1** .
 **Supports both old and latest NodeJS releases** (v12.4.0 passes all the tests).
 
 Your z/OS UserId should have ftp access.
+
+-----
 
 ## Getting Started
 Install the package to your project:
@@ -80,6 +83,7 @@ try {
   console.log(error)
 }
 ```
+----
 ## API
 ```js 
 const zosUtils = require('zos-utils')
@@ -93,7 +97,7 @@ Initialise ZosJob and ZosFtp by providing the config object:
   * **port** <_number_>: _Optional_. **Default:** 21
   * **encoding** <_string_>: _Optional_. The encoding of the host, used by [iconv-lite](https://www.npmjs.com/package/iconv-lite) to encode-decode z/OS's outlists and datasets. Local JCL's and datasets **should always be in 'UTF8'** before submitting/uploading to host . **Default:** ```'UTF8'```
   * **watchJobInterval** <_number_>: _Optional_. Time interval (**ms**) used internally by ZosJob to watch Job's status during execution. If the host is not powerful enough , increase this number. **Default:** ```1000```
-  * **deleteMainframeOutlist** <_boolean_>: _Optional_. Set this to ```true``` if you want  ZosJob to keep outlist at host, after job completion. **Default:** ```false```
+  * **deleteMainframeOutlist** <_boolean_>: _Optional_. Set this to ```false``` if you want  ZosJob to keep outlist at host, after job completion. **Default:** ```true```
   * **loggingFunction**<_function_>: _Optional_. Handle / store logs the way you want, instead of logging them at the terminal. For example you can use ```test/debug.js``` module , to write to a file of your choice. **Default:** ```console.log```
 
 ### ZosJob
@@ -213,6 +217,7 @@ let job = new ZosJob(jcl)
         console.log(error)
       }  
       ```
+-----
 
 ## Running the tests
 Create a ```.env``` file at the root of the project and assign the following global variables:
@@ -234,12 +239,16 @@ or
 
 yarn test
 ```
+
+------
+
 ## Authors
 
 * **Christopher Chamaletsos** 
 
 See also the list of [contributors](https://github.com/chrishham/zos-utils/graphs/contributors) who participated in this project.
 
+------
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
