@@ -29,7 +29,7 @@ __2. [ZosFtp](#zosftp) :__ Ftp common operations.
 z/OS Utils takes advantage of the ability to [submit jobs to Mainframe via ftp](https://www.ibm.com/support/knowledgecenter/en/SSLTBW_2.1.0/com.ibm.zos.v2r1.halu001/intfjes.htm).
 
 ----
-### Prerequisites
+## Prerequisites
 
 NodeJS version >= **v8.2.1** .
 
