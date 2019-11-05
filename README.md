@@ -193,25 +193,25 @@ let job = new ZosJob(jcl)
       console.log(error)
     }  
     ```
-    * **list** ( hostPath <_string_>:**Required**): List dataset or PDS members defined by the ```hostpath``` variable.
+  * **list** ( hostPath <_string_>:**Required**): List dataset or PDS members defined by the ```hostpath``` variable.
     ```Javascript
-    try {
-      // list pds members
-      const result = await ZosFtp.list('U001.ZOSUTILS.PDS')
-      console.log(result) 
-      // Header fields might differ from installation to installation
-      // [
-      // ' Name     VV.MM   Created       Changed      Size  Init   Mod  Id',
-      //'STRING    01.04 2015/02/02 2015/02/02 14:25    27    15     0 U001    ',
-      //'BASIC     01.03 2015/02/17 2015/02/20 14:55   180   180     0 U001    ',
-      //'TEST      01.01 2016/09/28 2016/09/28 13:04   181   180     0 U001    ',
-      //'TRIAL     01.00 2019/11/05 2019/11/05 11:44     2     2     0 U001    '
-      // ]
-    
-    } catch(error) {
-      console.log(error)
-    }  
-    ```
+      try {
+        // list pds members
+        const result = await ZosFtp.list('U001.ZOSUTILS.PDS')
+        console.log(result) 
+        // Header fields may differ from installation to installation.
+        // [
+        // ' Name     VV.MM   Created       Changed      Size  Init   Mod  Id',
+        //'STRING    01.04 2015/02/02 2015/02/02 14:25    27    15     0 U001    ',
+        //'BASIC     01.03 2015/02/17 2015/02/20 14:55   180   180     0 U001    ',
+        //'TEST      01.01 2016/09/28 2016/09/28 13:04   181   180     0 U001    ',
+        //'TRIAL     01.00 2019/11/05 2019/11/05 11:44     2     2     0 U001    '
+        // ]
+      
+      } catch(error) {
+        console.log(error)
+      }  
+      ```
 
 ## Running the tests
 Create a ```.env``` file at the root of the project and assign the following global variables:
